@@ -1,0 +1,306 @@
+@font-face {
+    font-family: 'Burtons Dreams Pro';
+    src: url('fonts/burtonsDream.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor1: #F6F5F5;
+    --cor2: #F7F9F2;
+    --cor3: #730000;
+    --cor4: #9E0001;
+    --cor5: #495057;
+
+    --font1: 'Burtons Dreams Pro';
+    --font2: 'Merriweather';
+}
+
+body{
+    background-color: var(--cor1);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    margin: 0 80px;
+}
+
+.titulo{
+    font-family: var(--font1); 
+    color: var(--cor3);
+    font-weight: bold;
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+    width: 280px;
+    height: 48px;
+}
+
+textarea{
+    resize: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.entrada_texto{
+    background-color: var(--cor2);
+    border-radius: 12px;  
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 32px;
+    padding: 16px;
+}
+
+.entrada_texto, .saida_texto{
+    height: 480px;
+    width: 100%;
+    font-family: var(--font2);
+    font-size: 2rem;
+    color: var(--cor3);
+    
+}
+
+.entrada_texto:focus{
+    outline: none;
+    overflow: hidden;
+}
+
+::placeholder{
+    color: var(--cor3);
+}
+
+.saida_texto{
+    background-color: transparent;
+    position: relative;
+}
+
+.informação{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font2);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 16px;
+    color: var(--cor5);
+    margin-bottom: 16px;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+button{
+    width: 302px;
+    height: 72px;
+    font-family: var(--font2);
+    font-size: 1rem;
+    border-radius: 24px;
+    border: 1px solid var(--cor3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;  
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: var(--cor4);
+}
+
+//focar com teclado.
+button:focus {
+    outline: 2px solid var(--cor4); 
+    outline-offset: 2px;
+}  
+
+button:active {
+    transform: scale(0.95);
+    background-color: var(--cor4);
+}
+
+.criptografar, .descriptografar{
+    background-color: var(--cor3);
+    color: white;
+}
+
+.gato{
+    position: absolute;
+    z-index: 1;
+    left: 63%;
+    top: 26%;
+}
+
+.placeholder{
+    text-align: center;
+    position: absolute;
+    top: 56%;
+    left: 57%;
+}
+
+.placeholder_titulo{
+    font-family: var(--font1);
+    color: var(--cor3);
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.placeholder_sub{
+    font-family: var(--font2);
+    font-size: 1.13rem;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: var(--cor3);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.copiar{
+    background-color: var(--cor3);
+    color: white;
+    width: 100%;
+    margin-top: 66px
+}
+
+footer{
+    padding: 0.5%;
+    background-color: var(--cor4);
+    text-align: center;
+    color: var(--cor1);
+    font-size: 1rem;
+    font-family: var(--font2);
+    margin-top: 60px;
+}
+
+@media(max-width: 768px){
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 0 20px;
+    }
+
+    button{
+        width: 100%;
+    }
+
+    .gato{
+        display: none;
+    }
+
+    .placeholder{
+        position: sticky;
+    }
+
+    .saida{
+        margin-top: 32px;
+    }
+
+    .saida_texto{
+        height: auto;
+    }
+}
+
+@media(max-width: 375px){
+
+    .container{
+        margin: 0 20px;
+    }
+
+    header{
+        margin: 20px;
+    }
+   
+    .titulo{
+        font-size: 1.75rem;
+    }
+
+    .entrada_texto, .saida_texto{
+        font-size: 1.5rem;
+    }
+
+    .informação{
+        font-size: 0.75rem;
+    }
+
+    button{
+        width: 150px;
+        height: 62px;
+        font-size: 0.75rem;
+    }
+
+    button img{
+        width: 16px;
+    }
+
+    .botoes{
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .criptografar, .descriptografar{
+        width: 100%;
+    }
+
+    .placeholder_titulo{
+        font-size: 1.75rem;
+    }
+
+    .placeholder_sub{
+        font-size: 1rem;
+    }
+
+    footer{
+        font-size: 0.75rem;
+        margin-top: 40px;
+    }
+
+    .toast {
+        margin-left: 0;
+        left: 20px;
+        right: 20px;
+        font-size: 17px;
+    }
+    
+}

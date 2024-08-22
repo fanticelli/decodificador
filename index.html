@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logoAba.png" type="image/png">
+    <title>Mensagens Mágicas</title>
+</head>
+
+<body>
+    <header>
+        <img src="assets/logo.png" alt="rosto do gato">
+        <h1 class="titulo">TRADUTOR DE MENSAGENS MÁGICAS</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            
+            <section class="entrada">
+                <textarea class="entrada_texto" placeholder="Digite aqui sua mensagem"></textarea>
+                <div class="informação">
+                    <img src="assets/info.png" alt="icone de informação">Apenas letras minúsculas e sem acento.
+                </div>
+    
+                <div class="botoes">
+                    <button class="criptografar" onclick="btnCriptografar()">
+                        <img src="assets/key.png" alt="imagem de uma chave">
+                        CRIPTOGRAFAR
+                    </button>
+                    <button class="descriptografar" onclick="btnDescriptografar()">
+                        <img src="assets/key_off.png" alt="imagem de uma chave riscada em cima">
+                        DESCRIPTOGRAFAR
+                    </button>
+                </div>
+            </section>
+    
+            <section class="saida">
+                <div class="textarea-container">
+                    <img class="gato" src="assets/gato.png" alt="gato olhando">
+                    <div class="saida_texto"></div>
+    
+                    <div class="placeholder">
+                        <span class="placeholder_titulo">Cadê a mensagem?</span>
+                        <br>
+                        <span class="placeholder_sub">Só consigo usar meus poderes de criptografia com sua ajuda!
+                        <br>Digite uma mensagem que você queira criptografar ou descriptografar</span>
+                    </div>
+                    <button class="copiar">
+                        <img src="assets/copia.png" alt="imagem de copia">COPIAR
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <div id="toast" class="toast">Texto copiado!</div>
+
+        <footer>
+            <p>© 2024 Paloma Fanticelli. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
