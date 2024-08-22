@@ -1,6 +1,7 @@
 # Decodificador Mágico
 
-![decodificador](https://github.com/user-attachments/assets/1b2be656-6395-4f94-bfd1-ffade3c22e6b)  
+![decodificador](https://github.com/user-attachments/assets/822cfb86-01a3-4eca-9b49-a336b88c41c0)
+
 
 ## Ferramentas utilizadas:
 
